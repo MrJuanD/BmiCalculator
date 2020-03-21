@@ -9,4 +9,8 @@ export class Tab1Page {
 
   constructor() {}
 
+  countBmi(mass: number, height: number) {
+    let bmiValue = (mass / ((height / 100) * (height / 100)));
+    return bmiValue;
+  }
 }

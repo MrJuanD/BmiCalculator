@@ -1,0 +1,37 @@
+<!-- 
+<div id="container">
+
+  <strong>{{ name }}</strong>
+  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+ 
+
+  <ion-item>
+    <ion-label position="stacked">Mass [{{massUnit}}] <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input [formControl]="selectMass" required type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Height [{{heightUnit}}] <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input [formControl]="selectHeight" required type="number" ></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" color="secondary" (click)="showBmi()" [disabled]="selectMass.invalid || selectHeight.invalid">Count</ion-button>
+
+  <strong [ngClass]="bmiColor">{{ bmiValue }}</strong>
+</div> -->
+<div id="container">
+  <strong>{{ 'bmiSummaryLabel' | translate }}</strong>
+  <br />
+  <strong>{{ 'yourMass' | translate }} {{mass}} {{massUnit | translate}}</strong>
+  <br />
+  <strong>{{ 'yourHeight' | translate }} {{height}} {{heightUnit | translate}}</strong>
+  <br />
+  <strong class="{{bmiColor}}">{{ 'yourBmi' | translate }} {{bmiValue}}</strong>
+  <br />
+  <div [ngSwitch]="bmiCategory">
+    <p *ngSwitchCase="1">{{'bmiDescription1' | translate}}</p>
+    <p *ngSwitchCase="2">{{'bmiDescription2' | translate}}</p>
+    <p *ngSwitchCase="3">{{'bmiDescription3' | translate}}</p>
+    <p *ngSwitchCase="4">{{'bmiDescription4' | translate}}</p>
+  </div>
+</div>

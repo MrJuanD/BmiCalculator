@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      {{'tab3Name' | translate}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">{{'tab3Name' | translate}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div id="container">
+    <h1> {{'aboutAuthorName' | translate}}</h1>
+    <h1> {{'aboutAuthorAge' | translate}}</h1>
+    <h1> {{'aboutAuthorInterests' | translate}}</h1>
+  </div>
+  <div class="center">
+    <img src="../../assets/cardi.png" />
+  </div>
+
 </ion-content>

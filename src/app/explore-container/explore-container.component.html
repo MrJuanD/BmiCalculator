@@ -1,4 +1,10 @@
-<div id="form-container">
+<div id="container">
+
+  <strong>{{ name }}</strong>
+  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
+      Components</a></p>
+
+
   <ion-item>
     <ion-label position="stacked">Mass [{{ massUnit | translate}}] <ion-text color="danger">*</ion-text>
     </ion-label>
@@ -14,13 +20,10 @@
   <ion-button expand="full" color="secondary" (click)="showBmi()"
     [disabled]="selectMass.invalid || selectHeight.invalid">Count</ion-button>
 
+  <strong *ngIf="bmiValue" [ngClass]="bmiColor" (click)="showInfo()">{{ bmiValue }}</strong>
 
-</div>
-
-<div id="result-container">
-  <strong *ngIf="bmiValue && !userClicked" [ngClass]="bmiColor" (click)="showInfo()">{{ bmiValue }}</strong>
   <div *ngIf="bmiValue && userClicked">
     <app-bmi-information mass="{{selectMass.value}}" height="{{selectHeight.value}}" bmiValue="{{bmiValue}}"
-      massUnit="{{massUnit}}" heightUnit="{{heightUnit}}" bmiCategory="{{bmiCategory}}" bmiColor="{{bmiColor}}"></app-bmi-information>
+      massUnit="{{massUnit}}" heightUnit="{{heightUnit}}" bmiCategory="{{bmiCategory}}"></app-bmi-information>
   </div>
 </div>

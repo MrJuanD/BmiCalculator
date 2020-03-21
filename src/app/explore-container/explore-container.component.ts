@@ -6,6 +6,7 @@ import { Validators, FormControl } from '@angular/forms';
   styleUrls: ['./explore-container.component.scss'],
 })
 export class ExploreContainerComponent implements OnInit {
+  @Input() name: string;
   @Input() massUnit: string;
   @Input() heightUnit: string;
   @Input() countBmi: any;
@@ -24,10 +25,8 @@ export class ExploreContainerComponent implements OnInit {
 
   showBmi() {
     this.userClicked = false;
-    console.log(this.selectMass);
-    console.log(this.selectHeight);
     this.bmiValue = this.countBmi(this.selectMass.value, this.selectHeight.value);
-    this.bmiValue =  Number.parseFloat(this.bmiValue.toFixed(2));  
+    this.bmiValue.toFixed(2);
     this.setBmiCategory();
   }
   showInfo() {

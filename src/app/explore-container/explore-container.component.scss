@@ -1,4 +1,13 @@
-#container {
+#form-container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  transform: translateY(-50%);
+}
+#result-container {
   text-align: center;
 
   position: absolute;
@@ -24,4 +33,36 @@
 
 #container a {
   text-decoration: none;
+}
+
+.bmi-color1 {
+  color: #082E79;
+}
+
+.bmi-color2 {
+  color: #4169E1;
+}
+
+.bmi-color3 {
+  color: #ACE1AF;
+}
+
+.bmi-color4 {
+  color: #CDEBA7;
+}
+
+.bmi-color5 {
+  color: #FFFF99;
+}
+
+.bmi-color6 {
+  color: #FDE456;
+}
+
+.bmi-color7 {
+  color: #CF2929;
+}
+
+.bmi-color8 {
+  color: #801818;
 }
